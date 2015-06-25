@@ -1,6 +1,6 @@
 (ns main
-    "github.com/eatonphil/nucore/fmt"
-    "github.com/eatonphil/nucore/net/http")
+    "github.com/eatonphil/gimpy/fmt"
+    "github.com/eatonphil/gimpy/net/http")
 
 (def hello (fn [w r]
     (fmt/Fprintf w "hello")
