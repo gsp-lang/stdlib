@@ -1,4 +1,5 @@
 (ns main
+    "github.com/jcla1/gisp/core"
     "github.com/eatonphil/gimpy/fmt"
     "github.com/eatonphil/gimpy/net/http")
 
