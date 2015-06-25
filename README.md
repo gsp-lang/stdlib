@@ -9,6 +9,10 @@ because all values in Gisp are core.Any (or interface{}).
 
 ```bash
 go get github.com/eatonphil/gimpy
+cd <go-path>/github.com/jcla1/gisp
+go build
+echo $(pwd) >> ~/.bashrc
+. ~/.bashrc
 ```
 
 ## Example
@@ -31,14 +35,22 @@ Here is a simple "Hello World" server application written in Gisp, using Gimpy:
 
 ## Running
 
-The Gisp compiler is really just a translator. It translates Gisp to Go. This
-Go is outputted
+The Gisp compiler translates Gisp to Go. Running the Gisp program will dump
+a Go program to stdout. So a workflow for running Gisp programs would look
+like this:
+
+```bash
+mkdir src
+gisp examples/server.gsp > src/server.go
+go run src/server.go
+```
 
 ## API
 
 While the API is tremendously bare, the standard has been set to allow anyone
 to easily add functions to Gimpy as they need access to the Go stdlib
-counterpart.
+counterpart. Right now, the bare minimum bindings were made to make a simple
+server possible - a proof of concept.
 
 The API is designed to mimick the Go stdlib exactly.
 
