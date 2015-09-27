@@ -3,7 +3,7 @@ package http
 import (
 	"net/http"
 
-	"github.com/jcla1/gisp/core"
+	"github.com/gsp-lang/gsp/core"
 )
 
 func HandleFunc(pattern core.Any, _handler func(core.Any, core.Any) core.Any) {
