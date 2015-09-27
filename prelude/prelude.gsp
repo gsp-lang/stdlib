@@ -28,3 +28,13 @@
     (if (= (Nullq a) true)
         z
         (Cons (Car a) (Append (Cdr a) z)))))
+
+(def Y (fn [f] (fn [a] (f f a))))
+
+(def List (fn [v]
+    (let [[l (len v)]]
+        (if (= l 0)
+            Null
+            (Cons
+                (get 0 v)
+                (List (get 1 l v)))))))
